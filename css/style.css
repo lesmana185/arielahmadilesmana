@@ -97,6 +97,8 @@ header ul li a:hover {
 
 section {
     padding: 50px 0;
+    margin: 50px auto 10px;
+    
 }
 section h3 {
     text-align: center;
@@ -285,3 +287,92 @@ ul {
     color: #151414;
     text-transform: capitalize;
 }
+
+
+
+
+
+/* Tambahkan ini di bawah CSS yang ada */
+
+/* Media query untuk layar lebar (lebih dari 1024px) */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+    .profile img {
+        right: 300px;
+    }
+}
+
+/* Media query untuk layar tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    header ul {
+        float: none;
+        text-align: center;
+    }
+    header ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    .profile img {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .service-container {
+        flex-direction: column;
+    }
+    .service {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Media query untuk layar ponsel (kurang dari 768px) */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    header h1 {
+        float: none;
+        text-align: center;
+    }
+    header ul {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+    header ul li {
+        display: block;
+        width: 100%;
+    }
+    .gambar {
+        height: 40vh;
+        background-position: center;
+    }
+    .profile img {
+        width: 150px;
+        height: 150px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .service-container {
+        flex-direction: column;
+    }
+    .service {
+        width: 100%;
+        margin: 10px 0;
+    }
+    form {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
