@@ -143,14 +143,19 @@ section h2{
 #services {
     text-align: center;
     padding: 50px;
+    margin-right: 40px;
 }
 
 .service-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    transition: 1s;
 }
 
+.service-container :hover{
+    transform: scale(1.12);
+}
 .service {
     background-color: #f2f2f2;
     padding: 20px;
@@ -158,12 +163,8 @@ section h2{
     width: 300px;
     text-align: center;
     cursor: pointer;
+}
 
-}
-.service img {
-    width: 100px;
-    height: 100px;
-}
 
 #contact {
     /* background-color: #f2f2f2; */
