@@ -100,47 +100,75 @@ section {
     margin: 0 auto 10px;
     
 }
-section h3 {
+.welcome h3 {
     text-align: center;
     padding: 20px 0;
     color: rgb(68, 203, 245);
     margin-bottom: 25px;
 }
+
+.welcome p{
+    text-align: center;
+    line-height: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* About */
 .about{
+    grid-area: about;
     margin-top: 50px;
 }
-
-.about p {
-    color: black;
-    line-height: 30px;
-    margin-top: 40px;
-    text-align: center;
-
+.container-about{
+    display: grid;
+    grid-template-areas: 
+    'nama nama'
+    'biodata profile'
+    'biodata profile';
 }
-/* .sub-menu {
-    background-color: skyblue;
-    color: aliceblue;
+/* .about::after {
+    content: "";
+    display: block;
+    clear: both;
 } */
+
+
 section h1{
     text-align: center;
     font-size: 50px;
     color: rgb(68, 203, 245);
 }
 section h2{
+    margin-top: 20px;
     text-align: center;
+}
+
+.profile{
+    grid-area: profile;
 }
 
 .profile img{
     width: 200px;
     height: 250px;
     border-radius: 50%;
-    position: absolute;
-    right: 300px;
+   
+}
 
+.nama{
+    margin-right: 50px;
 }
+
+
+
 .biodata{
+    grid-area: biodata;
     width: 640px;
+    color: black;
+    line-height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 80px;
 }
+
 
 #services {
     text-align: center;
@@ -163,8 +191,8 @@ section h2{
     padding: 20px;
     margin: 10px;
     width: 300px;
+    height: 150px;
     text-align: center;
-    cursor: pointer;
 }
 
 
@@ -211,73 +239,6 @@ section h2{
 } */
 
 /* footer */
-
-.container-footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-items: center;
-}
-ul {
-    list-style: none;
-}
-.footer {
-    background-color: #24262b;
-    padding: 50px 0px 0px 0;
-    box-sizing: border-box;
-
-}
-.footer-col h4 {
-    font-size: 1.5em;
-    color: #fff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 300;
-    position: relative;
-}
-.footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}
-.footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-}
-.footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbb;
-    display: block;
-    transition: all .3s ease;
-}
-.footer-col ul li a:hover {
-    color: #fff;
-    padding-left: 8px;
-}
-.footer-col .social-media a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, .2);
-    margin-right: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #fff;
-    text-decoration: none;
-    transition: all .5 ease;
-}
-.footer-col .social-media a:hover {
-    color: #24262b;
-    background-color: #fff;
-}
 
 .bottom-bar {
     background-color: #aaa;
