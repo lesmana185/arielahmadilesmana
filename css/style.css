@@ -254,90 +254,149 @@ section h2{
 }
 
 
-
-
-
-/* Tambahkan ini di bawah CSS yang ada */
-
-/* Media query untuk layar lebar (lebih dari 1024px) */
-@media screen and (min-width: 1024px) {
-    .container {
-        width: 80%;
-    }
-    .profile img {
-        right: 300px;
-    }
-}
-
-/* Media query untuk layar tablet (768px - 1024px) */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 768px) {
     .container {
         width: 90%;
     }
-    header ul {
-        float: none;
-        text-align: center;
-    }
-    header ul li {
-        display: block;
-        margin: 5px 0;
-    }
-    .profile img {
-        right: 50%;
-        transform: translateX(50%);
-    }
-    .service-container {
-        flex-direction: column;
-    }
-    .service {
-        width: 80%;
-        margin: 10px auto;
-    }
-}
 
-/* Media query untuk layar ponsel (kurang dari 768px) */
-@media screen and (max-width: 767px) {
-    .container {
-        width: 100%;
-        padding: 0 15px;
-    }
     header h1 {
         float: none;
         text-align: center;
     }
+
     header ul {
         float: none;
         text-align: center;
-        padding: 0;
+        margin-top: 10px;
     }
+
     header ul li {
         display: block;
+        margin-bottom: 10px;
+    }
+
+    .gambar {
+        height: 50vh;
+        background-position: 0 -100px;
+    }
+
+    .container-about {
+        display: block;
+    }
+
+    .biodata, .profile {
+        margin: 0 auto;
+        text-align: center;
         width: 100%;
     }
-    .gambar {
-        height: 40vh;
-        background-position: center;
-    }
+
     .profile img {
         width: 150px;
-        height: 150px;
-        right: 50%;
-        transform: translateX(50%);
+        height: 200px;
     }
-    .service-container {
-        flex-direction: column;
-    }
-    .service {
-        width: 100%;
-        margin: 10px 0;
-    }
-    form {
-        width: 100%;
+
+    .biodata {
+        margin-left: 0;
+        line-height: 25px;
     }
 }
 
+.profile {
+    grid-area: profile;
+}
 
+.profile img {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+}
 
+.nama {
+    margin-right: 50px;
+}
+
+.biodata {
+    grid-area: biodata;
+    width: 640px;
+    color: black;
+    line-height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 80px;
+}
+
+#services {
+    text-align: center;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 1s;
+}
+
+.service-container:hover {
+    transform: scale(1.12);
+}
+
+.service {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+}
+
+#contact {
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bottom-bar {
+    background-color: #aaa;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+    display: grid;
+    align-content: start;
+}
+
+.bottom-bar p {
+    color: #151414;
+    text-transform: capitalize;
+}
 
 
 
