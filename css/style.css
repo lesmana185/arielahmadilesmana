@@ -253,8 +253,8 @@ section h2{
     text-transform: capitalize;
 }
 
-
-@media (max-width: 768px) {
+/* Responsive */
+@media screen and (max-width: 1024px) {
     .container {
         width: 90%;
     }
@@ -293,6 +293,53 @@ section h2{
     .profile img {
         width: 150px;
         height: 200px;
+    }
+
+    .biodata {
+        margin-left: 0;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 50%;
+    }
+
+    header h1 {
+        float: none;
+        text-align: center;
+    }
+
+    header ul {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .gambar {
+        height: 50vh;
+        background-position: 0 -100px;
+    }
+
+    .container-about {
+        display: block;
+        display: 50vh;
+        display: grid;
+        grid-template-areas: 
+        'profile'
+        'nama'
+        'biodata ';
+    }
+
+    .profile img {
+        width: 150vh;
+        height: 200vh;
     }
 
     .biodata {
