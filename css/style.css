@@ -301,7 +301,7 @@ section h2{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 560px) {
     .container {
         width: 50%;
     }
@@ -329,7 +329,6 @@ section h2{
 
     .container-about {
         display: block;
-        display: 50vh;
         display: grid;
         grid-template-areas: 
         'profile'
@@ -345,6 +344,7 @@ section h2{
     .biodata {
         margin-left: 0;
         line-height: 25px;
+        width: 50vw;
     }
 }
 
