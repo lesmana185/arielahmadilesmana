@@ -135,7 +135,7 @@ section {
 section h1{
     text-align: center;
     font-size: 50px;
-    color: rgb(68, 203, 245);
+    color: black
 }
 section h2{
     margin-top: 20px;
@@ -149,15 +149,9 @@ section h2{
 .profile img{
     width: 200px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 20% 20% 10% 10%;
    
 }
-
-.nama{
-    margin-right: 50px;
-}
-
-
 
 .biodata{
     grid-area: biodata;
@@ -165,11 +159,14 @@ section h2{
     color: black;
     line-height: 30px;
     margin-top: 20px;
-    text-align: center;
     margin-left: 80px;
 }
 
+.biodata p{
+    text-align: center;
+}
 
+/* Service */
 #services {
     text-align: center;
     padding: 50px;
@@ -181,6 +178,7 @@ section h2{
     justify-content: center;
     flex-wrap: wrap;
     transition: 1s;
+    cursor: pointer;
 }
 
 .service-container :hover{
@@ -195,7 +193,55 @@ section h2{
     text-align: center;
 }
 
+.container-skil{
+    margin-top: 70px;
+}
 
+.box {
+    color: rgb(0, 0, 0);
+}
+
+.box .col {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+}
+
+.box .col p{
+    padding: 20px 0;
+}
+
+.box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 20px;
+    margin: 0 auto;
+    transition: 1s;
+    cursor: pointer;   
+}
+
+.icon:hover{
+    transform: scale(1.12);
+}
+
+.box .col h4 {
+    margin: 20px 0;
+}
+
+
+/* Contact */
 #contact {
     /* background-color: #f2f2f2; */
     padding: 50px;
@@ -229,14 +275,42 @@ section h2{
     border-radius: 5px;
     cursor: pointer;
   }
-  
-/* 
-.about{
-    background-image: url(../img/bg4.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ccc;
-} */
+
+  .container-contact{
+    margin: auto;
+  }
+  .box {
+    color: rgb(0, 0, 0);
+}
+
+.box-contact .col {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    margin: 45px;
+}
+
+.box-contact .col p{
+    padding: 20px 0;
+}
+
+.box-contact:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.col h4{
+    margin: 15px;
+}
+
+.peta{
+    align-items: center;
+    width: 600px;
+}
+
+
 
 /* footer */
 
@@ -254,7 +328,14 @@ section h2{
 }
 
 
-@media (max-width: 768px) {
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
     .container {
         width: 90%;
     }
@@ -301,102 +382,54 @@ section h2{
     }
 }
 
-.profile {
-    grid-area: profile;
+@media screen and (max-width: 560px) {
+    .container {
+        width: 50%;
+    }
+
+    header h1 {
+        float: none;
+        text-align: center;
+    }
+
+    header ul {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .gambar {
+        height: 50vh;
+        background-position: 0 -100px;
+    }
+
+    .container-about {
+        display: block;
+        display: grid;
+        grid-template-areas: 
+        'profile'
+        'nama'
+        'biodata ';
+    }
+
+    .profile img {
+        width: 150vh;
+        height: 200vh;
+    }
+
+    .biodata {
+        margin-left: 0;
+        line-height: 25px;
+        width: 50vw;
+    }
 }
 
-.profile img {
-    width: 200px;
-    height: 250px;
-    border-radius: 50%;
-}
 
-.nama {
-    margin-right: 50px;
-}
-
-.biodata {
-    grid-area: biodata;
-    width: 640px;
-    color: black;
-    line-height: 30px;
-    margin-top: 20px;
-    text-align: center;
-    margin-left: 80px;
-}
-
-#services {
-    text-align: center;
-    padding: 50px;
-    margin-top: 50px;
-}
-
-.service-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    transition: 1s;
-}
-
-.service-container:hover {
-    transform: scale(1.12);
-}
-
-.service {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    height: 150px;
-    text-align: center;
-}
-
-#contact {
-    padding: 50px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-label {
-    margin-bottom: 10px;
-}
-
-input, textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.bottom-bar {
-    background-color: #aaa;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
-    display: grid;
-    align-content: start;
-}
-
-.bottom-bar p {
-    color: #151414;
-    text-transform: capitalize;
-}
 
 
 
